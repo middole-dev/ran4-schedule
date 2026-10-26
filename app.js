@@ -30,6 +30,7 @@ const state = {
   selectedAgenda: null,
   changedSlots: new Set(),
   pollTimer: null,
+  publishedScheduleTimer: null,
   alertTimer: null,
   polling: false
 };
@@ -176,7 +177,9 @@ function renderHeader() {
       : ""
   ].filter(Boolean).join(" · ");
   ui.lastUpdated.textContent = `Last updated ${formatUpdatedAt(state.schedule.updatedAt)}`;
-  ui.sourceMode.textContent = isMeetingDay() ? "MEETING WEEK" : "LATEST SCHEDULE";
+  ui.sourceMode.textContent = isMeetingDay() && state.config.meetingFolderUrl
+    ? "MEETING WEEK · LOCAL NETWORK"
+    : "AUTO · 3GPP FTP";
 }
 
 function renderDayTabs() {
@@ -343,6 +346,9 @@ function contentHash(schedule) {
     meeting: schedule.meeting,
     location: schedule.location,
     dates: schedule.dates,
+    source: schedule.source,
+    sourceUrl: schedule.sourceUrl,
+    sourceModifiedAt: schedule.sourceModifiedAt,
     days: schedule.days
   });
 }
@@ -678,7 +684,6 @@ async function pollFolder() {
   if (state.polling) return;
   const folderUrl = getFolderUrl();
   if (!folderUrl) {
-    ui.sourceMode.textContent = isMeetingDay() ? "MEETING WEEK · LOCAL" : "LATEST · LOCAL";
     return;
   }
   state.polling = true;
@@ -700,6 +705,21 @@ async function pollFolder() {
     ui.sourceMode.textContent = "FOLDER CHECK NEEDED";
   } finally {
     state.polling = false;
+  }
+}
+
+async function pollPublishedSchedule() {
+  if (isMeetingDay() && state.config.meetingFolderUrl) return;
+  try {
+    const response = await fetch("./schedule.json", { cache: "no-store" });
+    if (!response.ok) throw new Error(`Could not load the published schedule (HTTP ${response.status}).`);
+    const schedule = translateScheduleLabels(await response.json());
+    if (contentHash(schedule) !== state.scheduleHash) {
+      setSchedule(schedule, `Automatic update: ${schedule.source}`);
+      renderHeader();
+    }
+  } catch (error) {
+    setStatus(`Could not check for published schedule updates: ${error.message}`, true);
   }
 }
 
@@ -832,11 +852,15 @@ async function initialize() {
   updateNotificationButton();
   try {
     const saved = localStorage.getItem(STORAGE_KEYS.schedule);
-    if (saved) state.schedule = JSON.parse(saved);
-    if (!state.schedule) {
-      const response = await fetch("./schedule.json");
+    const savedSchedule = saved ? JSON.parse(saved) : null;
+    try {
+      const response = await fetch("./schedule.json", { cache: "no-store" });
       if (!response.ok) throw new Error(`Could not load the initial schedule (HTTP ${response.status}).`);
       state.schedule = await response.json();
+    } catch (error) {
+      if (!savedSchedule) throw error;
+      state.schedule = savedSchedule;
+      setStatus(`Using the saved schedule because the published schedule could not be loaded: ${error.message}`, true);
     }
     translateScheduleLabels(state.schedule);
     state.scheduleHash = contentHash(state.schedule);
@@ -844,8 +868,14 @@ async function initialize() {
     renderHeader();
     renderDayTabs();
     renderSchedule();
-    setStatus("Initial schedule loaded.");
+    if (!ui.status.classList.contains("error")) {
+      setStatus(`Loaded ${state.schedule.source || "schedule"}${state.schedule.sourceModifiedAt
+        ? ` (3GPP modified: ${state.schedule.sourceModifiedAt})`
+        : ""}.`);
+    }
+    saveJson(STORAGE_KEYS.schedule, state.schedule);
     startPolling();
+    state.publishedScheduleTimer = setInterval(pollPublishedSchedule, 5 * 60 * 1000);
   } catch (error) {
     setStatus(`Could not load the initial schedule: ${error.message}`, true);
   }

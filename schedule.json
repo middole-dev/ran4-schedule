@@ -6,8 +6,10 @@
     "end": "2026-10-16"
   },
   "timezone": "Asia/Seoul",
-  "source": "RAN4_120bis_meeting_schedule_v02.pptx",
-  "updatedAt": "2026-10-25T21:15:55+09:00",
+  "source": "RAN4_120bis_meeting_schedule_THU_morning.pptx",
+  "sourceUrl": "https://www.3gpp.org/FTP/tsg_ran/WG4_Radio/TSGR4_120bis/Inbox/Meeting_Arrangements/History/RAN4_120bis_meeting_schedule_THU_morning.pptx",
+  "sourceModifiedAt": "2026/10/23 0:05",
+  "updatedAt": "2026-10-26T14:15:32+00:00",
   "days": [
     {
       "day": "Monday",
@@ -15,13 +17,15 @@
         "RAN4 Main (Yang Session)",
         "RAN4  Breakout 1(BR1) (Shan Session)",
         "RAN4 Breakout 2 (BR2)(Gene Session)",
-        "Ad hoc room"
+        "Ad hoc room",
+        "Offline Room"
       ],
       "slots": [
         {
           "time": "9:00-09:30",
           "sessions": [
-            "1. Opening of the meeting\n2. Approval of the agenda\n3. Letters / reports from other groups / meetings\n4. Incoming LS\n5. RAN task related to RAN4/5 coordination (AI 8.11.4)",
+            "1. Opening of the meeting\n2. Approval of the agenda\n3. Letters / reports from other groups / meetings\n4. Incoming LS\n5. 6GR SI Workplan (R4-2621469)\n6. Timeline of R21 5GA spec/CR (R4-262160)\n7. RAN task related to RAN4/5 coordination (AI 8.11.4)",
+            "",
             "",
             "",
             ""
@@ -30,10 +34,11 @@
         {
           "time": "9:30-10:30",
           "sessions": [
-            "Rel-20 6G SI\n[101] System Parameter",
+            "Rel-20 6G SI\n[101-B] System Parameter",
             "Rel-20 RRM\n[201] NR_RRM_Ph6",
             "5G UE RF\n[340] NR_UE_RF_Ph5 (19)\n[342] NR_low_band_CA_switching (5)",
-            "Main Ad-hoc: (until 11:00)\n[111] 6G operation efficiency by Aijun (CATT)"
+            "Main Ad-hoc: (until 11:00)\n[111] 6G operation efficiency by Aijun (CATT)",
+            ""
           ]
         },
         {
@@ -42,22 +47,25 @@
             "커피 타임",
             "",
             "",
+            "",
             ""
           ]
         },
         {
           "time": "11:00-13:00",
           "sessions": [
-            "[101] System Parameter",
+            "[101-A] System Parameter",
             "Rel-20 Demod\n[211] FS_NR_demod_SCM",
             "NTN\n[346] NR_IoT_NTN_Ph2 (40)\n[347] NR_IoT_NTN_Ph2_Part2 (18)",
-            "Main Ad-hoc\n[105-A] 6G RRM Chaired by Jerry (Apple)\n—12:00—\n[105-B] 6G RRM Chaired by Jin-Yup (LGE)"
+            "Main Ad-hoc\n[105-A] 6G RRM Chaired by Jerry (Apple)\n—12:00—\n[105-B] 6G RRM Chaired by Jin-Yup (LGE)",
+            ""
           ]
         },
         {
           "time": "13:00-14:30",
           "sessions": [
             "점심시간",
+            "",
             "",
             "",
             ""
@@ -68,14 +76,16 @@
           "sessions": [
             "[102] General RF and UE RF",
             "Rel-20 AI\n[218] NR_AIML_air_Ph2",
-            "NTN (cont)\n[349] NR_NTN_GNSS_resilient (9)\n[350] LTE_TN_NR_NTN_handover (14)\n[348] NR_IoT_NTN_Ph2_Part3_RRM (20)",
-            "BR2 Ad-hoc: 5G BSRF (14:30 – 15:30)\n[345] NR_BS_RF_Ph2, chaired by Torbjörn (Ericsson)\nBR1 Ad-hoc: 6G testability/OTA (15:30-16:30)\n[217] 6G testability and OTA, chaired by Ruixin Wang (vivo)"
+            "NTN (cont)\n[350] LTE_TN_NR_NTN_handover (14)\n[348] NR_IoT_NTN_Ph2_Part3_RRM (20)\n[349] NR_NTN_GNSS_resilient (9)",
+            "BR2 Ad-hoc: 5G BSRF (14:30 – 15:30)\n[345] NR_BS_RF_Ph2, chaired by Torbjörn (Ericsson)\nBR1 Ad-hoc: 6G testability/OTA (15:30-16:30)\n[217] 6G testability and OTA, chaired by Ruixin Wang (vivo)",
+            ""
           ]
         },
         {
           "time": "16:30-17:00",
           "sessions": [
             "커피 타임",
+            "",
             "",
             "",
             ""
@@ -86,8 +96,9 @@
           "sessions": [
             "[108] Spectrum sharing",
             "Rel-20 RRM\n[205] NR_MIMO_Ph6_RRM",
-            "[NTN (cont)\n[351] LTE_IoT_NTN_high_power (11)\n[356] NR_IoT_extended_guardband (17)",
-            "BR1 Ad-hoc:\nRel-20 OTA\n[216] NR_UE_OTA_Enh, chaired by Ruixin Wang (vivo)"
+            "[NTN (cont)\n[351] LTE_IoT_NTN_high_power (11)\n[356] NR_IoT_extended_guardband (17) (Continued Weds morning)",
+            "BR1 Ad-hoc:\nRel-20 OTA\n[216] NR_UE_OTA_Enh, chaired by Ruixin Wang (vivo)",
+            "[107-A] 6G AI, Chaired by Jackson (Samsung)"
           ]
         },
         {
@@ -96,7 +107,8 @@
             "Main Ad-hoc:\n[102-A] 6G General RF and UE RF, Chaired by Toni (Qualcomm)",
             "BR1 Ad-hoc:\n[218] NR_AIML_air_Ph2, Chaired by Tom (E///)",
             "BR2 Ad-hoc:  Sensing coexistence\n[362] 6G_Sensing, chaired by Fei (ZTE)",
-            "BR1 Ad-hoc:\nR20 RRM\n[201] NR_RRM_Ph6, Chaired by Zhixun Tang (E///)"
+            "BR1 Ad-hoc:\nR20 RRM\n[201] NR_RRM_Ph6, Chaired by Zhixun Tang (E///)",
+            "[206] NR_AIML_Mob_RRM, Chaired by Qiuge Guo (OPPO)  (18.00-19.00)"
           ]
         }
       ]
@@ -107,22 +119,25 @@
         "RAN4 Main (Yang Session)",
         "RAN4 RRM_Demod_OTA (Shan Session)",
         "RAN4 RF,NTN,A-IOT (Gene Session)",
-        "Ad hoc room"
+        "Ad hoc room",
+        "Offline room"
       ],
       "slots": [
         {
           "time": "8:30-10:30",
           "sessions": [
-            "[107] 6G AI",
+            "[107-A] 6G AI\n----9.30-------\n[107-B] 6G AI",
             "Rel-20 RRM\n[207] NR_Mob_Ph5_RRM\n[209] Ambient_IoT_Ph2_RRM",
             "6G SI/RAN task: NTN Coexistence\n[364] NTN_coexistence (24)\nRel-20 UAV\n[352] NR_UAV (14)",
-            "BR1 Ad-hoc:\n5G-A & 6G OTA\n[216] NR_UE_OTA_Enh & [217] 6G testability and OTA, Chaired by Ruixin Wang (vivo)"
+            "BR2 Ad-hoc: Spectrum basket work items (8.30 – 9.30)\n[324] NR_CADC_SUL(including band combination database), chaired by Per (Ericsson)\nBR2 Ad-hoc: NR_UE_RF (9.30 – 10:30)\n[340] NR_UE_RF_Ph5, chaired by Alok (Nokia)",
+            "Main Ad-hoc: (10.00-11.00)\n[101-B] System Parameter, Chaired by Jingqiang (OPPO)"
           ]
         },
         {
           "time": "10:30-11:00",
           "sessions": [
             "커피 타임",
+            "",
             "",
             "",
             ""
@@ -134,7 +149,8 @@
             "[105] 6G RRM",
             "Rel-20 Demod\n[210] NR_demod_Ph6\n[213] NR_cov_Ph3_demod",
             "5G BSRF\n[345] NR_BS_RF_Ph2 (21)\n6G SI: BSRF\n[360] 6G_BSRF_requirements (26)",
-            "BR2 Ad-hoc: Spectrum basket work items (11:00 – 12:00)\n[324] NR_CADC_SUL(including band combination database), chaired by Per (Ericsson)\nBR2 Ad-hoc: NR_UE_RF (12:00 – 13:00)\n[340] NR_UE_RF_Ph5, chaired by Alok (Nokia)"
+            "BR1 Ad-hoc:\n5G-A & 6G OTA\n[216] NR_UE_OTA_Enh & [217] 6G testability and OTA, Chaired by Ruixin Wang (vivo)",
+            "[102-A] 6G General RF and UE RF, Chaired by Toni (Qualcomm)"
           ]
         },
         {
@@ -143,22 +159,25 @@
             "점심시간",
             "",
             "",
+            "",
             ""
           ]
         },
         {
           "time": "14:30-16:30",
           "sessions": [
-            "[104] Spectrum\n---16:00---\n[111] 6G RAN4 operation efficiency",
-            "Rel-20 RRM\n[206] NR_AIML_Mob_RRM\n---15:30---\n[202] NR_UAV_req_RRM\nCoffee break: [202] NR_UAV_req_RRM",
+            "[104] Spectrum\n---16:00---\n[111] 6G RAN4 operation efficiency\nCoffee break AH: 105-B 6G RRM, chaired by Jinyup",
+            "Rel-20 RRM\n[206] NR_AIML_Mob_RRM\n---15:30---\n[202] NR_UAV_req_RRM",
             "6G SI: BSRF\n[361] 6G_BSRF_coexistence_AAS (40)",
-            "BR2 Ad-hoc: Ambient IoT D2T2\n[354] A-IoT_indoor_test chaired by Huiping (Xiaomi)\nBR2 Ad-hoc: NTN HD-FDD and DL CA RRM (15:30 – 16:30)\n[348] NR_IoT_NTN_Ph2_Part3_RRM chaired by Jinyeong (LGE)"
+            "BR2 Ad-hoc: Ambient IoT D2T2\n[354] A-IoT_indoor_test chaired by Huiping (Xiaomi)\nBR2 Ad-hoc: NTN HD-FDD and DL CA RRM (15:30 – 16:30)\n[348] NR_IoT_NTN_Ph2_Part3_RRM chaired by Jinyeong (LGE)",
+            "[211] FS_NR_demod_SCM, Chaired by Axel Mueller (Nokia)\n----15.30---\n[107-B] 6G AI, Chaired by Santhan (Ericsson)"
           ]
         },
         {
           "time": "16:30-17:00",
           "sessions": [
             "커피 타임",
+            "",
             "",
             "",
             ""
@@ -170,7 +189,8 @@
             "[111] 6G RAN4 operation efficiency",
             "Rel-20 RRM Cont.\n[206] NR_AIML_Mob_RRM",
             "6G SI BSRF (cont)",
-            "Main Ad-hoc:\n[108] Spectrum sharing, Chaired by jingjing (CMCC)"
+            "Main Ad-hoc:\n[108] Spectrum sharing, Chaired by jingjing (CMCC)",
+            "[208] NR_NTN_GNSS_resilient_RRM by Dorin"
           ]
         },
         {
@@ -179,7 +199,8 @@
             "Main Ad hoc\n[104-A] Spectrum, Chaired by Johannes(Nokia)",
             "RRM Ad-hoc:\n[206] NR_AIML_Mob_RRM, Chaired by Qiuge Guo (OPPO)",
             "BR2 Ad-hoc: 6G coexistence\n[361] 6G_BSRF_coexistence_AAS, coexistence part, chaired by Michal (Huawei)",
-            "Main Ad hoc:\n[101-A] System Parameter, Chaired by Leo (Huawei)"
+            "Main Ad hoc:\n[101-A] System Parameter, Chaired by Leo (Huawei)",
+            "[349] NR_NTN_GNSS_resilient by Dorin"
           ]
         }
       ]
@@ -190,22 +211,25 @@
         "RAN4 Main (Yang Session)",
         "RAN4 RRM_Demod_OTA (Shan Session)",
         "RAN4 RF,NTN,A-IOT (Gene Session)",
-        "Ad hoc room"
+        "Ad hoc room",
+        "Offline room"
       ],
       "slots": [
         {
           "time": "8:30-10:30",
           "sessions": [
-            "[107] 6G AI",
+            "[107-A] 6G AI\n[107-B] 6G AI",
             "OTA\n[217] 6G testability and OTA\n[216] NR_UE_OTA_Enh",
-            "[355] NR_PC1_UL_MIMO_n100_n101 (4)\n[371] A-MPR_JSON (4)\nAmbient IoT\n[353] A-IoT_sys_outdoor (32)",
-            "BR1 Ad-hoc:(8:30-9:30)\n[211] FS_NR_demod_SCM, Chaired by Axel Mueller (Nokia)\nBR2 Ad-hoc: TBD"
+            "Start at 8:00\n[356] NR_IoT_extended_guardband (17) (Cont)\n8:30 – 10:30\n[371] A-MPR_JSON (4)\n[355] NR_PC1_UL_MIMO_n100_n101 (4)\nAmbient IoT\n[353] A-IoT_sys_outdoor (32)",
+            "BR1 Ad-hoc:(8:30-9:30)\n[211] FS_NR_demod_SCM, Chaired by Axel Mueller (Nokia)\nBR2 Ad-hoc: NTN features R20\n[323] NTN_Bands_Features_R20, chaired by Daniel (Apple)",
+            "----9.30------\n[102-B]  6G General RF and UE RF, Chaired by Haijie (Xiaomi)\nCoffee break AH: [346] PC1.5  NR-NTN Chaired by Tank"
           ]
         },
         {
           "time": "10:30-11:00",
           "sessions": [
             "커피 타임",
+            "",
             "",
             "",
             ""
@@ -216,8 +240,9 @@
           "sessions": [
             "[101] System Parameter",
             "OTA\n[216] NR_UE_OTA_Enh\n---12:00---\n6G demod\n[214] 6G Demod_Part1",
-            "Ambient IoT (cont)\n[354] A-IoT_indoor_test (17)\n6G SI: Sensing\n[362] 6G_Sensing coex, req, test (32)",
-            "BR1 Ad-hoc:\nR20 AI\n[218] NR_AIML_air_Ph2, Chaired by Tom (E///)"
+            "Ambient IoT (cont)\n[353] A-IoT_sys_outdoor (32) (cont)\n[354] A-IoT_indoor_test (17)\n6G SI: Sensing\n[363] 6G_Sensing feasibility (17)",
+            "BR1 Ad-hoc:\nR20 AI\n[218] NR_AIML_air_Ph2, Chaired by Tom (E///)",
+            "[105] 6G RRM\n---12:00----------\n[217] RAN4/RAN5 responsibility split for RRM performance test, chaired by Ruixin Wang (vivo)"
           ]
         },
         {
@@ -226,16 +251,18 @@
             "점심시간",
             "",
             "",
+            "",
             ""
           ]
         },
         {
           "time": "14:30-16:30",
           "sessions": [
-            "[105] 6G RRM",
+            "[105] 6G RRM\nCoffee break AH: [105-A] 6G RRM, chaired by Jerry",
             "6G demod\n[214] 6G Demod_Part1 Cont.\n[215] 6G Demod_Part2",
             "6G SI: Sensing\n[362] 6G_Sensing coex, req, test (cont)\n[363] 6G_Sensing feasibility (17)",
-            "Main Ad-hoc: (14:30-15:30)\n[101-B] System Parameter, Chaired by Jingqiang (OPPO)\n---15:30---\nBR2 Ad-Hoc: Ambient IoT sys param and D4T1\n[353] A-IoT_sys_outdoor chaired by Linling (Huawei)"
+            "Main Ad-hoc: (14:30-15:30)\n[101-B] System Parameter, Chaired by Jingqiang (OPPO)\n---15:30---\nBR2 Ad-Hoc: Ambient IoT sys param and D4T1\n[353] A-IoT_sys_outdoor chaired by Linling (Huawei)",
+            "[107-A] 6G AI chaired by Jackson"
           ]
         },
         {
@@ -244,25 +271,28 @@
             "",
             "커피 타임",
             "",
+            "",
             ""
           ]
         },
         {
           "time": "17:00-18:00",
           "sessions": [
-            "[102] General RF and UE RF",
+            "[102-A] General RF and UE RF, chaired by Toni",
             "6G demod\n[215] 6G Demod_Part2 Cont.",
             "6G SI: Sensing (cont)",
-            "Main Ad-hoc:\n[107-B] 6G AI, Chaired by Santhan (Ericsson)"
+            "Main Ad-hoc:\n[107-B] 6G AI, Chaired by Santhan (Ericsson)",
+            "[208] NR_NTN_GNSS_resilient_RRM, chaired by Dorin"
           ]
         },
         {
           "time": "18:00-19:30",
           "sessions": [
             "Main Ad-hoc:\n[102-B] 6G General RF and UE RF, Chaired by Haijie (Xiaomi)",
-            "BR1 Ad hoc: Reserved",
+            "BR1 Ad hoc:\n5G-A & 6G OTA\n[216] NR_UE_OTA_Enh & [217] 6G testability and OTA, Chaired by Ruixin Wang (vivo)",
             "BBR2 Adhoc: 6G BSRF requirements\n[360] 6G_BSRF_requirements, chaired by Dominique (Ericsson)",
-            "Main Ad hoc:\n[105-A] 6G RRM Chaired by Jerry (Apple)\n---18:45---\n[105-B] 6G RRM Chaired by Jin-Yup (LGE)"
+            "Main Ad hoc:\n[105-A] 6G RRM Chaired by Jerry (Apple)\n---18:45---\n[105-B] 6G RRM Chaired by Jin-Yup (LGE)",
+            "-TN and NTN coexistence chaired by Shubham"
           ]
         }
       ]
@@ -273,16 +303,18 @@
         "RAN4 Main (Yang Session)",
         "RAN4 RRM_Demod_OTA (Shan Session)",
         "RAN4 RF,NTN,A-IOT (Gene Session)",
-        "Ad hoc room"
+        "Ad hoc room",
+        "Offline room"
       ],
       "slots": [
         {
           "time": "8:30-10:30",
           "sessions": [
-            "[112] TEI20\n[113] R18 maintenance: PC2 FDD HPUE duty cycle",
+            "[112] TEI20\n[113] R18 maintenance: PC2 FDD HPUE duty cycle\nEARLY RETURN TO (in the following order)\n6G system parameter\n6G UE RF\n6G AI",
             "Rel-20 RRM\n[203] NR_LBCA_Sw_enh_RRM\nR4-2621419 (Reply to RAN1 LS on scheduling restriction for RACH-related signals and channels)\n[208] NR_NTN_GNSS_resilient_RRM",
             "5G basket and spectrum WI\n[320] NR_LTE_combos_Features_R20 (9)\n[321] DC_xBLTE_yBNR_R20 (4)\n[322] NR_bands_Features_R20 (3)\n[323] NTN_Bands_Features_R20 (14)\n[324] NR_CADC_SUL_R20 (34)\n[325] NR_Bands_BW_PC_BC_RedCap (12)\n[329] New_CBW_5G_broadcast_over_GSO (1)\n[330] NR_LTE_1900MHz_TN_bands (17)\n[331] NR_HAPS_SUL_combos (4)",
-            "BR1 Ad-hoc:\nDemod\n[210] [211] 6G Demod_Part1&Part2"
+            "BR1 Ad-hoc:\nDemod\n[214] [215] 6G Demod_Part1&Part2",
+            ""
           ]
         },
         {
@@ -291,16 +323,18 @@
             "",
             "커피 타임",
             "",
+            "",
             ""
           ]
         },
         {
           "time": "11:00-13:00",
           "sessions": [
-            "EARLY RETURN TO (in the following order)\n6G system parameter\n6G UE RF\n6G spectrum\n6G spectrum sharing\n6G RRM\n6G AI\n6G operation efficiency",
+            "----11:10----\n6G system parameter\n6G UE RF\n6G AI\n6G spectrum\n6G spectrum sharing",
             "Rel-20 Demod\n[212] NR_RRM_Ph6_demod\nRel-20 RRM\n[204] NR_IncMon_RRM",
-            "5G basket and spectrum WI (cont)\nBDaT Early Return To\nNTN coexistence\n7 GHz coexistence\nNTN\n6G sensing\nAmbient IoT\nBR2 Ad-hoc: 6G Sensing feasibility\n[363] 6G_Sensing feasibility, chaired by Mustafa (Qualcomm)",
-            "BR1 Ad-hoc:\nR20 RRM\n[208] NR_NTN_GNSS_resilient_RRM , Chaired by Dorin (Thales)\n---12:00---\n[206] NR_Mob_Ph5_RRM, Chaired by Hua Li (Apple)"
+            "5G basket and spectrum WI (cont)\nBDaT Early Return To\nNTN coexistence\n7 GHz coexistence\nNTN\n6G sensing\nAmbient IoT\nBR2 Ad-hoc: 6G Sensing feasibility\n[363] 6G_Sensing feasibility, chaired by Pierpaolo (Qualcomm)",
+            "BR1 Ad-hoc:\nR20 RRM\n[208] NR_NTN_GNSS_resilient_RRM , Chaired by Dorin (Thales)\n---12:00---\n[206] NR_Mob_Ph5_RRM, Chaired by Hua Li (Apple)",
+            "[216] NR_UE_OTA_Enh performance part, Chaired by Ruixin Wang (vivo)\n----12:00----\n~7GHz TN co-ex topic., chaired by Michal (Huawei)"
           ]
         },
         {
@@ -309,16 +343,18 @@
             "점심시간",
             "",
             "",
+            "",
             ""
           ]
         },
         {
           "time": "14:30-16:30",
           "sessions": [
-            "EARLY RETURN TO",
-            "Ad-hoc:\nR20 RRM (14:30 to TBD)\n[208] NR_NTN_GNSS_resilient_RRM , Chaired by Dorin (Thales)",
+            "6G RRM\n6G operation efficiency",
+            "Ad-hoc:\n[206] NR_AIML_Mob_RRM, Chaired by Qiuge Guo (OPPO)\nNOTE: To avoid the conflict with Main session, and 17:00-18:00 can also be sued for AI mobility",
             "BR2 Ad-hoc: TBD",
-            "BR2 Ad-hoc: NTN Rel-20 RF DL CA\n[346] PC1.5 NR NTN & NTN Rel-20 RF DL CA chaired by Tank (CHTTL)"
+            "BR2 Ad-hoc: NTN Rel-20 PC1.5 NR NTN & RF DL CA\n[346] PC1.5 NR NTN & NTN Rel-20 RF DL CA chaired by Tank (CHTTL)",
+            "Main Ad-hoc: (14.30-15.30)\n[101-B] System Parameter, Chaired by Jingqiang (OPPO)\n------15:30------\nMain Ad-hoc:\n[102-B] 6G General RF and UE RF, Chaired by Haijie (Xiaomi)\nCoffee break AH: [102-A] 6G General RF and UE RF, Chaired by Toni"
           ]
         },
         {
@@ -327,25 +363,28 @@
             "",
             "커피 타임",
             "",
+            "",
             ""
           ]
         },
         {
           "time": "17:00-18:00",
           "sessions": [
-            "Main Ad-hoc:\n[107-A] 6G AI, Chaired by Jackson (Samsung)",
+            "Main Ad-hoc:\n[101-A] System Parameter, Chaired by Leo (Huawei)",
             "Ad-hoc or Early Return-to: Reserved",
             "BR2 Ad-hoc: NTN Rel-20 HD-FDD\n[347] NR_IoT_NTN_Ph2_Part2 chaired by Jeffery (MTK)",
-            "Main Ad hoc:\n[104-B] Spectrum, Chaired by Bo (CT)"
+            "Main Ad hoc:\n[104-B] Spectrum, Chaired by Bo (CT)",
+            "[211] FS_NR_demod_SCM, Chaired by Axel Mueller (Nokia)"
           ]
         },
         {
           "time": "18:00-19:30",
           "sessions": [
-            "Main Ad-hoc:\n[107-A] 6G AI, Chaired by Jackson (Samsung)\n----18:30----\n[111] 6G operation efficiency by Aijun (CATT)",
-            "Ad-hoc or Early Return-to: Reserved",
+            "Main Ad-hoc:\n[107-A] 6G AI, Chaired by Jackson (Samsung)",
+            "Ad-hoc\n[208] NR_NTN_GNSS_resilient_RRM, Chaired by Dorin (Thales)",
             "BDaT Ad-hoc: TBD",
-            "Main Ad hoc:\n[102-A/B] System Parameter, Chaired by Leo (Huawei)/Jinqiang (OPPO)"
+            "Main Ad hoc:\n[102-A/B] System Parameter, Chaired by Leo (Huawei)/Jinqiang (OPPO)",
+            "[111] 6G operation efficiency by Aijun (CATT)"
           ]
         }
       ]

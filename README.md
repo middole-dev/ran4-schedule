@@ -1,6 +1,6 @@
 # RAN4 Meeting Schedule
 
-Static English-language schedule viewer, preloaded with the RAN4#120bis v02 PowerPoint.
+Static English-language schedule viewer, preloaded with the latest available RAN4#120bis schedule.
 
 ## Run locally
 
@@ -28,11 +28,15 @@ git push
 
 The push starts a deployment automatically. Check the **Actions** tab to see its status and the deployed site URL.
 
-## Live schedule folders
+## Automatic schedule updates
 
-Open **Settings** and enter the meeting-week folder and the final-schedule folder. The page checks the meeting-week folder during the date range in the loaded schedule; on other dates it checks the final-schedule folder. Folder pages must expose links to `.pptx` files, and both the listing and files must be readable by the browser. For a different origin, the host must also allow browser CORS requests. The page checks at the selected interval and reports inaccessible folders instead of silently switching schedules.
+GitHub Actions checks the public 3GPP RAN4#120bis history folder every 15 minutes:
 
-If the folder has no directory listing or does not allow browser requests, a small same-origin endpoint or a published manifest will be needed; the exact folder address and hosting permissions can be confirmed when available.
+`https://www.3gpp.org/FTP/tsg_ran/WG4_Radio/TSGR4_120bis/Inbox/Meeting_Arrangements/History/`
+
+It selects the newest schedule PowerPoint using the directory's modified time, parses its weekday tables into `schedule.json`, and deploys the updated site when the schedule changes. The file name is used to break ties when multiple files have the same modified time. An open site checks the published `schedule.json` every five minutes, so it can display an update without a manual refresh. Scheduled GitHub Actions can be delayed, so updates are not guaranteed to appear exactly 15 minutes after upload.
+
+During meeting week, `10.10.10.10` is a private network address. GitHub-hosted runners cannot access it, so the public site cannot monitor that server directly. A browser on the meeting network may use the existing **Settings** folder URL while it is open, if the server permits browser access and CORS; that updates only that visitor's browser. To publish internal-only changes to everyone automatically, the schedule must also be copied to a public source, or a secured self-hosted runner/relay must be installed on the meeting network. Do not publish private meeting documents or credentials.
 
 ## Completed agenda results
 
