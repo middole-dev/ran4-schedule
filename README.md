@@ -14,7 +14,7 @@ Open `http://localhost:8000`. The same static files can be hosted on GitHub Page
 
 ## Publish with GitHub Pages
 
-Create a **public** repository named `ran4-schedule` under `middole-dev`, then push this project to the `main` branch. The included GitHub Actions workflow deploys the site automatically after each push. In the repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions** if Pages is not already configured.
+Create a **public** repository named `ran4-schedule` under `middole-dev`, then push this project to the `main` branch. The included GitHub Actions workflow deploys the site automatically after each push. In the repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions** if Pages is not already configured. If Pages is enabled after the initial push, rerun the failed workflow from the **Actions** tab.
 
 The default site URL will be `https://middole-dev.github.io/ran4-schedule/`. Personal folder URLs, alert keywords, and favorites are stored in the visitor's browser and are not included in this repository. The schedule JSON is publicly served as part of the site.
 
