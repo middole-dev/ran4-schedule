@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101c35">
+    <title>RAN4 Meeting Schedule</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="RAN4 Schedule home">
+        <span class="brand-mark">R4</span>
+        <span>3GPP <strong>RAN4</strong></span>
+      </a>
+      <span id="source-mode" class="mode-badge">Loading schedule</span>
+      <button id="settings-open" class="button button-quiet" type="button">Settings</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">WORKING GROUP MEETING</p>
+          <h1 id="meeting-title">RAN4 Meeting Schedule</h1>
+          <p id="meeting-subtitle" class="muted">Weekly meeting schedule</p>
+        </div>
+        <div class="hero-meta">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="last-updated">Checking for schedule updates</span>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Schedule navigation">
+        <div id="day-tabs" class="day-tabs" role="tablist" aria-label="Meeting days"></div>
+        <div class="toolbar-actions">
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Search agenda, AI, or WI" aria-label="Search agenda">
+          </label>
+          <button id="today-button" class="button button-outline" type="button">Today</button>
+        </div>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <section id="schedule" class="schedule" aria-label="Meeting schedule"></section>
+
+      <section class="interests-panel">
+        <div>
+          <p class="eyebrow">PERSONAL ALERTS</p>
+          <h2>Agenda Alerts</h2>
+          <p class="muted">Get a browser alert before sessions matching your keywords or starred agendas begin.</p>
+        </div>
+        <div class="interest-controls">
+          <div id="interest-tags" class="interest-tags" aria-label="Saved agenda keywords"></div>
+          <form id="interest-form" class="interest-form">
+            <label class="visually-hidden" for="interest-input">Agenda keyword</label>
+            <input id="interest-input" type="text" maxlength="60" placeholder="e.g. NR_NTN, 6G RRM">
+            <button class="button button-primary" type="submit">Add keyword</button>
+          </form>
+          <div class="alert-controls">
+            <label for="lead-time">Alert lead time</label>
+            <select id="lead-time">
+              <option value="5">5 minutes before</option>
+              <option value="10">10 minutes before</option>
+              <option value="15">15 minutes before</option>
+              <option value="30">30 minutes before</option>
+            </select>
+            <button id="notifications-enable" class="button button-outline" type="button">Enable browser alerts</button>
+          </div>
+          <p id="notification-help" class="small muted">Alerts are delivered while this page is open.</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Schedule data is based on the RAN4 meeting schedule PowerPoint.</span>
+        <label class="upload-button">
+          Open PPTX
+          <input id="pptx-upload" type="file" accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation">
+        </label>
+      </footer>
+    </main>
+
+    <dialog id="settings-dialog" class="settings-dialog">
+      <form id="settings-form" method="dialog">
+        <div class="dialog-heading">
+          <div>
+            <p class="eyebrow">SCHEDULE SOURCE</p>
+            <h2>Schedule Settings</h2>
+          </div>
+          <button id="settings-close" class="icon-button" type="button" aria-label="Close">×</button>
+        </div>
+        <p class="muted">During meeting week, the live schedule folder is checked. Outside meeting week, the final schedule folder is used.</p>
+        <label class="field-label" for="meeting-folder">Meeting-week schedule folder URL</label>
+        <input id="meeting-folder" type="url" placeholder="https://.../meeting-schedule/">
+        <label class="field-label" for="final-folder">Final schedule folder URL</label>
+        <input id="final-folder" type="url" placeholder="https://.../final-schedule/">
+        <label class="field-label" for="results-folder">Meeting results DOCX folder URL</label>
+        <input id="results-folder" type="url" placeholder="https://.../meeting-results/">
+        <label class="field-label" for="poll-interval">Folder check interval</label>
+        <select id="poll-interval">
+          <option value="30">30 seconds</option>
+          <option value="60">1 minute</option>
+          <option value="120">2 minutes</option>
+          <option value="300">5 minutes</option>
+        </select>
+        <p class="small muted">The browser must be able to access the folder listing and PowerPoint files (public access or CORS).</p>
+        <div class="dialog-actions">
+          <button id="settings-cancel" class="button button-outline" type="button">Cancel</button>
+          <button class="button button-primary" type="submit">Save and check</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="results-dialog" class="results-dialog" aria-labelledby="results-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">COMPLETED AGENDA</p>
+          <h2 id="results-title">Discussion Results</h2>
+        </div>
+        <button id="results-close" class="icon-button" type="button" aria-label="Close">×</button>
+      </div>
+      <p id="results-agenda" class="results-agenda"></p>
+      <p class="analysis-note">The DOCX is analyzed in your browser. Excerpts below are matched by agenda keywords and agreement-related phrases; this is not an AI-generated summary.</p>
+      <label class="field-label" for="results-document">Meeting results document</label>
+      <select id="results-document">
+        <option value="">Loading documents…</option>
+      </select>
+      <p id="results-status" class="small muted" role="status" aria-live="polite"></p>
+      <section id="results-content" class="results-content" aria-live="polite"></section>
+    </dialog>
+  </body>
+</html>
